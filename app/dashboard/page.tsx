@@ -8,6 +8,8 @@ import { Plus, FileText, Calendar, User } from "lucide-react"
 import { format } from "date-fns"
 import { getRatingColor } from "@/lib/utils/rating-calculator"
 
+export const dynamic = 'force-dynamic'
+
 export default async function DashboardPage() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
